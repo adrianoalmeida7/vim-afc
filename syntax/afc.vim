@@ -12,6 +12,9 @@ syn match afcNonPrintable "\[TODO\s.*\]"
 syn match afcNonPrintable "\[todo\s.*\]"
 syn match afcNonPrintable "\[index\s.*\]"
 
+syn match afcCode "\[code\]"
+syn match afcCode "\[\/code\]"
+
 syn match afcInline			"%%.\{-}%%"
 syn match afcInline			"\*\*.\{-}\*\*"
 syn match afcInline			"::.\{-}::"
@@ -26,5 +29,7 @@ hi def link afcNonPrintable	Comment
 hi def link afcInline				Constant
 hi def link afcBoxes				Keyword
 hi def link afcList					Type
+hi def link afcNotes				Comment
+hi def link afcCode					Constant
 
 let b:current_syntax = "afc"
