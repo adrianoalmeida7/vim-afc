@@ -15,10 +15,11 @@ syn match afcNonPrintable "\[index\s.*\]"
 syn match afcInline			"%%.\{-}%%"
 syn match afcInline			"\*\*.\{-}\*\*"
 syn match afcInline			"::.\{-}::"
+syn match afcInline			"__.\{-}__"
 
 syn region afcNotes start="\[note\]" end="\[\/note\]" display
 syn region afcBoxes start="\[box" end="\[\/box\]" display
-syn region afcList	start="\[list" end="\[\/list\]" display contains=afcBoxes
+syn region afcList	start="\[list" end="\[\/list\]" display contains=afcBoxes,afcInline,afcNonPrintable
 
 hi def link afcStructure		Keyword
 hi def link afcNonPrintable	Comment
