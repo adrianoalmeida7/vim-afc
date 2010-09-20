@@ -8,21 +8,21 @@ syn match afcStructure "\[section\s.*\]"
 syn match afcStructure "\[chapter\s.*\]"
 syn match afcStructure "\[quote\s.*\]"
 
-syn match afcComment "\[TODO\s.*\]"
-syn match afcComment "\[todo\s.*\]"
-syn match afcComment "\[index\s.*\]"
+syn match afcNonPrintable "\[TODO\s.*\]"
+syn match afcNonPrintable "\[todo\s.*\]"
+syn match afcNonPrintable "\[index\s.*\]"
 
-syn match afcCode			"%%.\{-}%%"
-syn match afcCode			"\*\*.\{-}\*\*"
+syn match afcInline			"%%.\{-}%%"
+syn match afcInline			"\*\*.\{-}\*\*"
+syn match afcInline			"::.\{-}::"
 
 syn region afcNotes start="\[note\]" end="\[\/note\]" display
 syn region afcBoxes start="\[box" end="\[\/box\]" display
 syn region afcList	start="\[list" end="\[\/list\]" display contains=afcBoxes
 
 hi def link afcStructure		Keyword
-hi def link afcComment			Comment
-hi def link afcNotes				Comment
-hi def link afcCode					Constant
+hi def link afcNonPrintable	Comment
+hi def link afcInline				Constant
 hi def link afcBoxes				Keyword
 hi def link afcList					Type
 
