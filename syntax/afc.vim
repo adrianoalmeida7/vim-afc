@@ -13,6 +13,7 @@ syn match afcComment "\[todo\s.*\]"
 syn match afcComment "\[index\s.*\]"
 
 syn match afcCode			"%%.\{-}%%"
+syn match afcCode			"\*\*.\{-}\*\*"
 
 syn region afcNotes start="\[note\]" end="\[\/note\]" display
 syn region afcBoxes start="\[box" end="\[\/box\]" display
