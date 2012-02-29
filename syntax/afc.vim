@@ -19,7 +19,7 @@ syn match afcInline			"\*\*.\{-}\*\*"
 syn match afcInline			"::.\{-}::"
 syn match afcInline			"__.\{-}__"
 
-syn region afcNotes start="\[note\]" end="\[\/note\]" display contains=afcCode, afcInline
+syn region afcNotes start=/\[note/ end="\[\/note\]" display contains=afcCode, afcInline
 
 syn region afcBoxes start="\[box" end="\[\/box\]" display contains=afcCode, afcInline
 syn region afcCode	start=/\[code/ end="\[\/code\]" display
