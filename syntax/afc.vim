@@ -8,6 +8,8 @@ syn match afcStructure "\[section\s.*\]"
 syn match afcStructure "\[chapter\s.*\]"
 syn match afcStructure "\[quote\s.*\]"
 
+syn match afcElement "\[img\s.*\]"
+
 syn match afcNonPrintable "\[TODO\s.*\]"
 syn match afcNonPrintable "\[todo\s.*\]"
 syn match afcNonPrintable "\[index\s.*\]"
@@ -39,5 +41,6 @@ hi def link afcList					Type
 hi def link afcNotes				Define
 hi def link afcCode					Comment
 hi def link afcExercise			Delimiter
+hi def link afcElement      Constant
 
 let b:current_syntax = "afc"
